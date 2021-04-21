@@ -22,7 +22,7 @@ const AddLeader: React.FC<Props> = ({ saveLeader }) => {
           <input onChange={handleForm} type='text' id='name' />
         </div>
         <div>
-          <label htmlFor='score'>Description</label>
+          <label htmlFor='score'>Score</label>
           <input onChange={handleForm} type='number' id='score' />
         </div>
       </div>
