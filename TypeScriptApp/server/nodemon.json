@@ -1,0 +1,7 @@
+{
+  "env": {
+      "MONGO_USER": "gaseema",
+      "MONGO_PASSWORD": "codemania",
+      "MONGO_DB": "test"
+  }
+}
