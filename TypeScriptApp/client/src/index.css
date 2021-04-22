@@ -14,6 +14,7 @@ body{
 
 .centeredDiv {
   text-align: center;
+  max-width: 700px;
   position: absolute;
   left: 50%;
   top: 50%;

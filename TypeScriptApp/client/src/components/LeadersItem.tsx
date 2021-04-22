@@ -1,5 +1,6 @@
 import React from "react"
 type Props = LeadersProps & {
+  
 }
 const Leader: React.FC<Props> = ({ leader }) => {
   return (
@@ -12,4 +13,4 @@ const Leader: React.FC<Props> = ({ leader }) => {
   )
 }
 
-export default Leader
+export default Leader 

@@ -2,6 +2,8 @@ import axios, { AxiosResponse } from "axios"
 
 const baseUrl: string = "http://localhost:4000"
 
+
+
 export const getLeaders = async (): Promise<AxiosResponse<ApiDataType>> => {
   try {
     const leaders: AxiosResponse<ApiDataType> = await axios.get(

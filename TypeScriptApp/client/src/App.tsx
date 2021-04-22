@@ -25,7 +25,8 @@ const App: React.FC = () => {
         setLeaders(data.leaders)
       })
       .catch(err => console.log(err))
-  }
+  }  
+  
   return (
     <main className='App'>
       <Router>
