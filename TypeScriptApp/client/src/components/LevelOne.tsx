@@ -7,16 +7,16 @@ type Props = {
 
 const LevelOne: React.FC<Props> = () => {
   const [query, setQuery] = useState('');
-
-
+  
   // This function is called when the input changes
   const inputHandler = (event: React.ChangeEvent<HTMLInputElement>) => {
     const enteredName = event.target.value;
+    if (isNaN(Number(enteredName))) {
+      return 0;
+    }
     setQuery(enteredName);
   };
   function fetchPreviousPrimeNumber(num: number) {
-    if (isNaN(num))
-      return 0;
     let greater = 0;
     let isPrime = (num: number) => {
       for (let i = 2; i < num; i++)
@@ -40,6 +40,9 @@ const LevelOne: React.FC<Props> = () => {
   }
   return (
     <div>
+      <div className='levelInfo'>
+        <p>Enter a positive number on the input below and I will return the highest prime number lower than the input number</p>
+      </div>
       <form className='Form'>
         <div>
           <input
@@ -47,8 +50,11 @@ const LevelOne: React.FC<Props> = () => {
             onChange={inputHandler}
             placeholder="Enter Number"
           />
-          <p>{query}</p>
-          <p>{fetchPreviousPrimeNumber(Number(query))}</p>
+          <div className='levelOneResults'>
+            <p>Your Input: {query}</p>
+            <p>Result: {fetchPreviousPrimeNumber(Number(query))}</p>
+          </div>
+          {/* <p className='invalidInput'>{validNum === true ? 'Enter a valid number' : ''}</p> */}
         </div>
       </form>
     </div>

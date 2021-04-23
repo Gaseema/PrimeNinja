@@ -17,7 +17,7 @@ const Navigation: React.FC = () => {
     <div className="navigation">
       <nav className="navbar navbar-expand navbar-dark bg-dark">
         <div className="container">
-          <p className="navbar-brand">PrimeNinja</p>
+          <h1 className="navbar-brand">PrimeNinja</h1>
           <div>
             <ul className="navbar-nav ml-auto">
               <li className={`nav-item  ${query === "/level-one" ? "active" : ""}`}>

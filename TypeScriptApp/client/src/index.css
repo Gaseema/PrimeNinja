@@ -1,27 +1,80 @@
-body{
+body {
   font-family: 'Raleway', sans-serif;
 }
-.background{
+
+.background {
   background: #fd746c;
   background: -webkit-linear-gradient(to right, #ff9068, #fd746c);
   background: linear-gradient(to right, #ff9068, #fd746c);
   height: 100vh;
 }
+
 /****************************************************
                   NAVIGATION START
 ****************************************************/
-.navigation p{
+.navigation p {
   margin: 0;
 }
+
+.navigation .navbar {
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.gameDiv .navigation {
+  max-width: 900px;
+}
+
+.gameDiv .centeredDiv {
+  width: 100%;
+  background: white;
+  border-radius: 5px;
+  min-height: 400px;
+  -webkit-box-shadow: 0px 0px 28px 2px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 0px 28px 2px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 0px 28px 2px rgba(0, 0, 0, 0.75);
+}
+.gameDiv p{
+  color: black !important;
+}
+
+.navigation h1 {
+  margin: 0;
+}
+
 /****************************************************
                   NAVIGATION END
 ****************************************************/
-.gameDiv .navigation{
-  max-width: 900px;
+
+
+/****************************************************
+                  LEVEL INFO START
+****************************************************/
+
+.levelInfo{
+  padding: 6% 5%;
+  padding-bottom: 10px;
 }
-.gameDiv .centeredDiv{
-  width: 100%;
+.centeredDiv input{
+  margin-bottom: 4%;
+  border: solid black 1px;
+  border-radius: 5px;
+  padding: 10px 30px;
 }
+
+.levelOneResults p{
+  padding: 0px;
+  margin: 0px;
+}
+.invalidInput{
+  color: red !important;
+}
+
+
+/****************************************************
+                  LEVEL INFO END
+****************************************************/
+
 
 
 /****************************************************
@@ -48,10 +101,12 @@ body{
   color: white;
   font-size: 1.2em;
 }
-.startState{
+
+.startState {
   margin: 0px;
 }
-.centeredDiv button{
+
+.centeredDiv button {
   border-radius: 5px;
   padding: 15px 70px;
   font-size: 1.2em;
@@ -59,6 +114,7 @@ body{
   border: none;
   margin-top: 20px;
 }
+
 /****************************************************
                   INTRO PAGE END
 ****************************************************/
