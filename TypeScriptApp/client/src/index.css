@@ -1,16 +1,33 @@
 body{
   font-family: 'Raleway', sans-serif;
 }
-
-/****************************************************
-                  INTRO PAGE START
-****************************************************/
-.intro {
+.background{
   background: #fd746c;
   background: -webkit-linear-gradient(to right, #ff9068, #fd746c);
   background: linear-gradient(to right, #ff9068, #fd746c);
   height: 100vh;
 }
+/****************************************************
+                  NAVIGATION START
+****************************************************/
+.navigation p{
+  margin: 0;
+}
+/****************************************************
+                  NAVIGATION END
+****************************************************/
+.gameDiv .navigation{
+  max-width: 900px;
+}
+.gameDiv .centeredDiv{
+  width: 100%;
+}
+
+
+/****************************************************
+                  INTRO PAGE START
+****************************************************/
+
 
 .centeredDiv {
   text-align: center;

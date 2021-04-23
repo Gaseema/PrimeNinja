@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { LeadersItem, AddLeader, Intro } from "./components";
+import { LeadersItem, AddLeader, Intro, LevelOne, Navigation } from "./components";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { getLeaders, addLeader } from './API'
 
@@ -25,23 +25,33 @@ const App: React.FC = () => {
         setLeaders(data.leaders)
       })
       .catch(err => console.log(err))
-  }  
-  
+  }
+
   return (
     <main className='App'>
       <Router>
         <Switch>
           <Route path="/" exact component={() => <Intro />} />
-          <Route path="/level-one">
-            <h1>All Leaders</h1>
-            <AddLeader saveLeader={handleSaveLeader} />
-            {leaders.map((leader: ILeadersBoard) => (
-              <LeadersItem
-                key={leader._id}
-                leader={leader}
-              />
-            ))}
-          </Route>
+          <div className='gameDiv background'>
+            <div className='centeredDiv'>
+              <Router>
+                <Navigation />
+                <Switch>
+                  <Route path="/level-one" component={() => <LevelOne />} />
+                  <Route path="/level-two">
+                    <h1>All Leaders</h1>
+                    <AddLeader saveLeader={handleSaveLeader} />
+                    {leaders.map((leader: ILeadersBoard) => (
+                      <LeadersItem
+                        key={leader._id}
+                        leader={leader}
+                      />
+                    ))}
+                  </Route>
+                </Switch>
+              </Router>
+            </div>
+          </div>
         </Switch>
       </Router>
     </main>

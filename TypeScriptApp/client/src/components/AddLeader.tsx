@@ -24,7 +24,7 @@ const AddLeader: React.FC<Props> = ({ saveLeader }) => {
 
     setQuery(enteredName);
   };
-  function doMath(num: number) {
+  function fetchPreviousPrimeNumber(num: number) {
     var greater = 0;
     var isPrime = (num: number) => {
       for (let i = 2; i < num; i++)
@@ -55,15 +55,14 @@ const AddLeader: React.FC<Props> = ({ saveLeader }) => {
           <input
             value={query}
             onChange={inputHandler}
-            placeholder="Search products"
-            className="input"
+            placeholder="Enter Number"
           />
           <p>{query}</p>
-          <p>{doMath(Number(query))}</p>
+          <p>{fetchPreviousPrimeNumber(Number(query))}</p>
         </div>
         <div>
           <label htmlFor='score'>Score</label>
-          <input onChange={handleForm} type='number' id='score' />
+          <input onChange={handleForm} type='number' id='score' disabled/>
         </div>
       </div>
       <button disabled={formData === undefined ? true : false} >Add Leader</button>
