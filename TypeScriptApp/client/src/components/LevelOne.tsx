@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import {fetchPreviousPrimeNumber} from '../utils/PrimeNumber'
 
 
 
@@ -10,34 +11,12 @@ const LevelOne: React.FC<Props> = () => {
   
   // This function is called when the input changes
   const inputHandler = (event: React.ChangeEvent<HTMLInputElement>) => {
-    const enteredName = event.target.value;
-    if (isNaN(Number(enteredName))) {
+    const enteredValue = event.target.value;
+    if (isNaN(Number(enteredValue))) {
       return 0;
     }
-    setQuery(enteredName);
+    setQuery(enteredValue);
   };
-  function fetchPreviousPrimeNumber(num: number) {
-    let greater = 0;
-    let isPrime = (num: number) => {
-      for (let i = 2; i < num; i++)
-        if (num % i === 0) return false;
-      return num > 1;
-    }
-    function getPrevPrime(num: number) {
-      for (let count = num - 1; ; --count) {
-        if (count <= 0)
-          break;
-        if (isPrime(count)) {
-
-          greater = count;
-          break;
-        }
-      }
-    }
-    getPrevPrime(num)
-
-    return greater;
-  }
   return (
     <div>
       <div className='levelInfo'>

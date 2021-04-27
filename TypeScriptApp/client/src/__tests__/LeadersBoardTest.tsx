@@ -1,11 +1,10 @@
 import React from "react";
-// import { render, fireEvent, waitForElement } from "@testing-library/react";
+import {fetchPreviousPrimeNumber} from '../utils/PrimeNumber'
 
-import LeadersForm from "../components/AddLeader";
-
-describe("<LeadersForm />", () => {
-  test("should display a blank leaders board form", async () => {
-    // ???
+describe("<PrimeNumber />", () => {
+  test("should return highest number lower than the input", async () => {
   });
-  
+  test('should return highest number lower than the input',async()=>{
+    expect(fetchPreviousPrimeNumber(55)).toBe(53);
+  })
 });
